@@ -34,6 +34,7 @@ skills/clear-communication/
   agents/openai.yaml           Allows implicit invocation in Codex
   references/examples.md      Chinese examples, loaded when needed
   references/examples.en.md   English examples, loaded when needed
+  references/document-revision.md  Only for an explicitly requested overhaul
 AGENTS.md                      Default-use instruction for this project
 doc/                           Installation and development documentation
 ```
@@ -56,6 +57,12 @@ The skill respects the user's audience, language, format, and tone. Automatic di
 - Explain directly; use analogies only when they help or are requested.
 - Avoid empty praise, invented jargon, redundant summaries, and mechanical formatting.
 
+## Working in an existing project
+
+No preliminary document cleanup is required. Extract facts without copying unclear prose. During normal maintenance, clarify the small coherent passage already being edited; do not scan or rewrite unrelated material. Preserve recognizable project names, identifiers, and UI labels, explaining them when needed. Respect narrower edit constraints; a broader overhaul remains the user's choice.
+
+This fits into ordinary writing and review, without old-document labels or a recurring cleanup task. The detailed [design rationale](doc/existing-material.md) is currently in Chinese; the runtime rules and optional overhaul guide are in English.
+
 ## Languages
 
 The README and installation guide are available in Chinese and English. There is one English runtime instruction file, with a [Chinese reading copy](doc/skill.zh-CN.md) for maintainers. Output follows the user's language; it is not bilingual unless requested. Examples are selected by language and loaded only when needed.
@@ -64,6 +71,6 @@ This avoids maintaining two competing skill entries or loading duplicate instruc
 
 ## Status
 
-Version `0.3.0`, 2026-10-24. Initial research, a problem inventory, examples, and evaluation design are available. Independent cross-model effectiveness and overhead experiments have not been completed; the project makes no measured performance claims.
+Version `0.4.0`, 2026-10-25. Initial research, a problem inventory, examples, and evaluation design are available. Independent cross-model effectiveness and overhead experiments have not been completed; the project makes no measured performance claims.
 
 Development records, in Chinese: [problems](doc/problems.md), [research](doc/research.md), [design](doc/design.md), [evaluation](doc/evaluation.md), [maintenance](doc/maintenance.md), and [changelog](doc/changelog.md).

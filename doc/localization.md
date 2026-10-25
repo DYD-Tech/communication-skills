@@ -2,6 +2,8 @@
 
 更新：2026-10-24；适用于 0.3.0。
 
+2026-10-25 补充：0.4.0 增加英文按需参考 `references/document-revision.md`，用于明确要求的全面改写；中文设计说明在 `doc/existing-material.md`。日常局部改善规则继续在运行入口与中文对照间同步，中英文示例现为 14 组。
+
 ## 推荐的仓库 description
 
 英文，适合公开仓库的 Description 字段：

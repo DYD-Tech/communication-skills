@@ -109,3 +109,21 @@ Request: explain a timeout to an English reader, without an analogy.
 Better: “A timeout limits how long the client waits for a response. If the limit is reached, the client stops waiting; the server may still be processing the request.”
 
 Do not equate “stops waiting” with “the server stops executing.” Follow the requested language without adding a second-language translation by default.
+
+## 13. Improve an edited passage without renaming its objects
+
+Given: “Return Bay” is the project's established retry-queue name. Failed tasks enter it and are archived after three total attempts fail. The current task changes this to four total attempts and updates the related comment.
+
+Original: `// Return Bay closes the failure-state loop; archive at three hops`
+
+Better: `// Failed tasks enter Return Bay (the retry queue); archive them if all four attempts fail.`
+
+Keep the recognizable name and clarify the comment already being edited. Do not invent a new name or revise unrelated sections. Total attempts and additional retries are different; follow the established behavior. If the user permits only changing the number, respect that restriction.
+
+## 14. Reading a document does not authorize rewriting it
+
+Task: use the document to answer who receives a notification; do not edit files. The document says, “Enable the outcome-awareness loop by notifying the applicant after review.”
+
+Better: “The applicant is notified after the review.”
+
+Extract the stated fact without copying empty phrasing or changing the source. If the source mentions only a “loop” without specifying behavior, do not infer a notification recipient.
