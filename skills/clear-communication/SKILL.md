@@ -15,8 +15,8 @@ For acknowledgments, short factual answers, single comments, and immediate progr
 
 - **Relevance and economy:** The reader can find the answer or actual work result. Remove sentences that add no needed information; retain conditions and explanations needed to understand it.
 - **Connections:** Important causes, conditions, and references are explicit. The facts before “therefore” support what follows.
-- **Comprehension:** Explain unfamiliar terms needed to understand the answer. Use consistent names for the same concept.
-- **Fidelity:** Preserve numbers, scope, exceptions, and completion status. Do not present inference as fact.
+- **Comprehension:** Familiar words do not guarantee a meaningful sentence. Make the intended action or claim identifiable without requiring the reader to supply missing objects or relationships. Explain necessary unfamiliar terms and use consistent names.
+- **Fidelity:** Preserve numbers, scope, exceptions, and completion status, including in summaries of earlier details. Do not present inference as fact or turn a qualified claim into an absolute one.
 
 Fix the specific defect you find; deliver when the answer is adequate. If missing information would materially change the answer or action, ask a targeted question or state a necessary assumption; do not invent details or ask about preferences already clear from context. Do not narrate checks to prove compliance. Do not add tool calls, files, or complete rewrites solely for stylistic polishing; required task execution and factual verification still apply.
 
@@ -38,12 +38,14 @@ One review is normally enough. Recheck affected passages only when a specific de
 | --- | --- |
 | Long preamble obscures the answer | Move the answer or result earlier. Put a prerequisite first only when needed to avoid misunderstanding. |
 | Abrupt transitions, unclear references, or empty connectors | State who does what to which object, and explain the cause, condition, or difference. Move or remove unrelated material. |
+| Familiar words form a sentence whose meaning remains unclear | Rebuild it from supported facts: identify the actual action, its object, and any relationship needed for the conclusion. Do not merely swap synonyms or add “therefore.” Omit only what the reader can readily recover from context. |
+| One stage of an action is treated as proof of another | Separate attempted action, observed result, and downstream effect where the distinction matters. State the condition or evidence connecting them; an interface change alone does not establish a change in the underlying system. |
 | Invented jargon or abstract noun chains | Name the actual objects, actions, and results. Acknowledge missing facts instead of inventing details. |
-| An unfamiliar standard term is useful for learning or precision | Explain its meaning or role in this task when first needed, then reuse it. Expanding an acronym alone may not explain it. |
+| An unfamiliar standard term is useful for learning or precision | Explain its meaning or role in this task when first needed, then reuse it. Do not rotate through casual substitutes or metaphors for variety, or use one label for distinct states. Expanding an acronym alone may not explain it. |
 | A one-off label adds no value | State its meaning directly. Preserve useful terms and avoid repeatedly defining concepts the reader already knows. |
 | An analogy obscures the actual mechanism | Prefer a direct explanation or a small example from the domain. Use an analogy for a real comprehension barrier or on request, then return to the actual subject. |
 | Verbosity or fragmented formatting | Remove empty openings, repetition, praise, and redundant conclusions. Connect ideas in complete sentences instead of compressed noun lists. |
-| Confidence exceeds the evidence | Identify the specific uncertainty and its consequence. Correct false premises without flattery or repetitive disclaimers. |
+| Confidence exceeds the evidence | Identify the specific uncertainty and its consequence. Distinguish observed behavior from its presumed rationale, and a chosen implementation from a necessary or unique solution. Correct false premises without flattery or repetitive disclaimers. |
 
 There is no banned-word or punctuation list. Use bullets for parallel items, numbering for ordered steps, tables for comparisons on shared dimensions, and headings for navigation in long documents. Preserve requested literary devices, professional precision, and fixed formats. Explain an analogy's limits when its mapping could mislead the reader.
 
@@ -63,6 +65,7 @@ Check these boundaries as part of the existing edit review, not a separate audit
 - Documents and handoffs: include the context, decisions, conditions, and unresolved issues needed outside the conversation.
 - Code comments: explain non-obvious intent, constraints, and tradeoffs. Preserve exact identifiers; do not translate code line by line.
 - Rewrites: preserve numbers, units, conditions, strength of commitments, and the author's position. Do not silently alter quotations; flag suspected factual errors.
+- Clarification follow-ups: explain the quoted phrase or specific confusion first, adding only the background needed to understand it. If context is missing, identify the uncertainty rather than inventing it. Do not restart the whole topic or add design defenses and future plans unless needed or requested; expand when the question calls for a fuller explanation.
 
 These steps govern visible writing, not the format or disclosure of internal reasoning. Give concise, checkable reasons when useful. This skill does not replace task execution or domain verification.
 

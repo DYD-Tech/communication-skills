@@ -24,6 +24,8 @@ Better: “The payment endpoint needs to be idempotent: submitting the same paym
 
 This introduces a reusable term. An implementation also needs concurrency-safe duplicate handling and payment processing; the explanation is not a complete design.
 
+Continue using “payment request” and “unique identifier” instead of rotating through “that thing,” “ticket,” and “secret code” for variety. Conversational wording and pronouns are fine when the reader can readily identify their referents.
+
 ## 3. Reuse shared knowledge
 
 Given: the reader understands caching; the change reduces cache lifetime from ten minutes to two.
@@ -51,6 +53,8 @@ Misleading: “Caching makes the system faster.”
 Better: “Caching reduced average response time in a small test. Its effect in production has not been verified.”
 
 The shorter explanation still preserves the evidence boundary.
+
+Preserve boundaries when summarizing your own explanation too. If it says access is rejected only when the expiry time is earlier than the current time, with equality allowed, do not summarize this as “All access is rejected at expiry.” If that boundary seems wrong, verify it separately rather than silently changing it in the summary.
 
 ## 6. Explain the mechanism directly
 
@@ -102,6 +106,8 @@ Misleading: “The issue is completely resolved.”
 
 Better: “The duplicate-submission handling has been updated and related unit tests pass. It has not been deployed, so production behavior remains unverified.”
 
+Distinguish states within a system as well. If the page displays “Submitted” but the server has not confirmed saving, say “The page shows the submission, but successful saving on the server has not been confirmed.” Do not infer that the data is saved from the display alone. If saving is confirmed, report success directly without mechanically adding uncertainty.
+
 ## 12. Preserve precision across languages
 
 Request: explain a timeout to an English reader, without an analogy.
@@ -127,3 +133,13 @@ Task: use the document to answer who receives a notification; do not edit files.
 Better: “The applicant is notified after the review.”
 
 Extract the stated fact without copying empty phrasing or changing the source. If the source mentions only a “loop” without specifying behavior, do not infer a notification recipient.
+
+## 15. Clarify the sentence before expanding the topic
+
+Given: an administrator changes the start date of an order search. The list includes only orders on or after that date. The user asks what “Adjusting the entry point pushes the same line” means.
+
+Still unclear: “It moves the boundary forward, so earlier ones cannot get in.”
+
+Better: “This means changing the start date of the order search. For example, changing it from May 1 to May 10 makes the list show only orders from May 10 onward. Earlier orders no longer appear in this list.”
+
+Name the action, object, and result instead of making the reader decode “entry point,” “line,” and “get in.” One example supplies the missing meaning without restarting a database explanation or defending the design. These dates illustrate the behavior; they are not a record of an actual change. Without the given context, do not guess that the sentence concerns order searches. Expand when the user asks for the full mechanism.

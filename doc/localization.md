@@ -6,6 +6,8 @@
 
 ## 推荐的仓库 description
 
+2026-10-29 补充：本地修订继续同步运行入口与中文对照，中英文教学示例现为 15 组；不代表已完成语言效果测试。
+
 英文，适合公开仓库的 Description 字段：
 
 > Help AI agents communicate clearly, explain useful terminology, and stay concise without losing meaning. Chinese and English guides included.
