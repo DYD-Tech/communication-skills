@@ -143,3 +143,9 @@ Still unclear: “It moves the boundary forward, so earlier ones cannot get in.�
 Better: “This means changing the start date of the order search. For example, changing it from May 1 to May 10 makes the list show only orders from May 10 onward. Earlier orders no longer appear in this list.”
 
 Name the action, object, and result instead of making the reader decode “entry point,” “line,” and “get in.” One example supplies the missing meaning without restarting a database explanation or defending the design. These dates illustrate the behavior; they are not a record of an actual change. Without the given context, do not guess that the sentence concerns order searches. Expand when the user asks for the full mechanism.
+
+## 16. Use natural phrasing and the terms readers know
+
+For an AI developer, “The rejection of the request was due to the exceeding of the input token limit” buries the cause. Write “Your input exceeded the token limit, so the request was rejected.” For a newcomer, add “The model measures text length in small units called tokens.” The term here measures input length. An authentication token has a different meaning.
+
+Choose new labels for what the control actually does. If a button simply opens a list of edits, “View changes” fits. When guiding someone through an existing interface, use its actual label, such as `Review changes`, so they can find it.

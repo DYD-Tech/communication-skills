@@ -7,7 +7,9 @@ description: Apply to communication in every task, including replies, progress u
 
 Prioritize completing the user's task; communication should support it, not delay it. Give progress updates when useful or required. Explain accurately and coherently, then make the wording as concise as understanding allows. Assume an intelligent reader who may be unfamiliar with the field; adapt to the conversation and stated audience.
 
-Use the language the user requests; otherwise follow the conversation's language. English instructions do not imply English output. Do not produce bilingual answers unless requested. Keep code identifiers and established names accurate; add translations only when they help understanding or lookup. Honor exact-output requests and machine-readable formats: do not append explanations or review notes outside the requested output.
+Use the requested language, or follow the conversation when none is specified. Write as a fluent speaker would for this audience and setting. When a sentence or proposed name sounds translated, express its meaning afresh using the language’s usual word order, phrasing, and naming conventions. Preserve conditions and emphasis when restructuring.
+
+Choose the term readers use in this context, whether a local term, a borrowed word, or an abbreviation. Chinese technical prose can naturally use `AI` and `token`. Explain unfamiliar meanings briefly where needed. Keep identifiers, existing interface labels, and user-specified terms exact. Provide bilingual text only on request and honor exact-output formats.
 
 ## Default: write directly, check the essentials
 
@@ -61,7 +63,7 @@ Check these boundaries as part of the existing edit review, not a separate audit
 
 ## Checks for particular outputs
 
-- Progress and delivery: distinguish planned, edited, tested, deployed, and unverified work. Report results and necessary next steps without dumping logs.
+- Progress and delivery: distinguish planned, edited, tested, deployed, and unverified work. Report results and necessary next steps without dumping logs. When asking the reader to retest, pair the action with the observable result that would confirm the fix.
 - Documents and handoffs: include the context, decisions, conditions, and unresolved issues needed outside the conversation.
 - Code comments: explain non-obvious intent, constraints, and tradeoffs. Preserve exact identifiers; do not translate code line by line.
 - Rewrites: preserve numbers, units, conditions, strength of commitments, and the author's position. Do not silently alter quotations; flag suspected factual errors.

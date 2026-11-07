@@ -6,6 +6,8 @@ Help agents communicate clearly: organize ideas logically, explain useful termin
 
 This project covers replies, explanations, documentation, code comments, and handoffs. It assumes an intelligent reader who may be unfamiliar with the field. Good explanations preserve useful concepts and help readers learn them.
 
+Use the word order, phrasing, and names familiar to readers of the target language. Borrowed terms and abbreviations such as AI and token can be natural in Chinese technical writing.
+
 ## Quick installation with your agent
 
 Once the repository is published, send this to a coding agent that can access the repository and write local files:
