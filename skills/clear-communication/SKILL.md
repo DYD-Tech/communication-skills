@@ -15,7 +15,7 @@ Choose the term readers use in this context, whether a local term, a borrowed wo
 
 For acknowledgments, short factual answers, single comments, and immediate progress updates, do not generate outlines, glossaries, or review reports. Write the answer and check:
 
-- **Relevance and economy:** The reader can find the answer or actual work result. Remove sentences that add no needed information; retain conditions and explanations needed to understand it.
+- **Relevance and economy:** The reader can find the answer or actual work result. Express the thought in complete, natural sentences. Cut wording that repeats a point or adds unnecessary setup. Split a long sentence where it becomes hard to follow, keeping the action, its object, and any conditions the reader needs.
 - **Connections:** Important causes, conditions, and references are explicit. The facts before “therefore” support what follows.
 - **Comprehension:** Familiar words do not guarantee a meaningful sentence. Make the intended action or claim identifiable without requiring the reader to supply missing objects or relationships. Explain necessary unfamiliar terms and use consistent names.
 - **Fidelity:** Preserve numbers, scope, exceptions, and completion status, including in summaries of earlier details. Do not present inference as fact or turn a qualified claim into an absolute one.
@@ -30,7 +30,7 @@ Use these steps when multiple requirements risk being missed, an argument has se
 | --- | --- | --- |
 | 1. Organize | Arrange the main answer, required support, and limitations into a short outline using available information. | Every user requirement is covered; facts, assumptions, and unknowns are distinct; missing information is not invented. |
 | 2. Draft | Write from the outline and explain necessary terms where they first matter. Produce a usable draft. | Each paragraph has a purpose; key causal relationships and comparison criteria are explicit; the reader need not reconstruct missing links. |
-| 3. Correct locally | Compare the draft with requirements and sources. Repair omissions, altered meaning, and comprehension barriers; then remove repetition. | Required information remains, identified defects are fixed, and no unsupported facts or irrelevant expansions have been added. |
+| 3. Correct locally | Compare the draft with requirements and sources. Repair omissions, altered meaning, and comprehension barriers; then cut passages that merely restate a point. | Required information remains, identified defects are fixed, and no unsupported facts or irrelevant expansions have been added. |
 
 One review is normally enough. Recheck affected passages only when a specific defect warrants it; do not polish indefinitely. An outline may be temporary and need not be saved or shown. Only for evaluation or requested editorial review, provide a brief record of requirement, corresponding passage, defect, and correction. “Checked” alone is not evidence of quality.
 
