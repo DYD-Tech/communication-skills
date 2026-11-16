@@ -13,11 +13,7 @@ Use the word order, phrasing, and names familiar to readers of the target langua
 Once the repository is published, send this to a coding agent that can access the repository and write local files:
 
 ```text
-Install clear-communication from https://github.com/DYD-Tech/communication-skills.
-The skill is in skills/clear-communication. Read doc/installation.en.md first.
-Install it for my user account and add a persistent instruction to apply it to every task.
-Preserve my existing rules and local changes. Install only the complete skill folder,
-not development documents or the repository's root AGENTS.md.
+Install from https://github.com/DYD-Tech/communication-skills for my account using doc/installation.en.md. Use skills/clear-communication and rules/English/clear-communication.md. Merge the rule text into persistent instructions and add the instruction to apply the skill on every task. Preserve existing rules and local edits.
 Verify the installed files and rule references. Report the paths, source revision,
 default-use configuration, and how to confirm activation.
 If this environment cannot support user-level installation or persistent instructions,
@@ -31,8 +27,10 @@ An ordinary chat interface may lack installation access. See the [installation g
 ## Project layout
 
 ```text
-skills/clear-communication/
-  SKILL.md                     Single runtime entry, in English
+rules/{English,中文}/clear-communication.md  Persistent rules, select one language
+skills/中文/clear-communication/  Chinese skill package
+skills/clear-communication/     English skill package (same layout)
+  SKILL.md                     Runtime instructions in the selected language
   agents/openai.yaml           Allows implicit invocation in Codex
   references/examples.md      Chinese examples, loaded when needed
   references/examples.en.md   English examples, loaded when needed
@@ -41,7 +39,7 @@ AGENTS.md                      Default-use instruction for this project
 doc/                           Installation and development documentation
 ```
 
-The complete distributable skill is `skills/clear-communication/`. The `doc/` folder is not a runtime dependency and should not be installed with it.
+Each language package is self-contained. The `doc/` folder is not a runtime dependency and should not be installed with it.
 
 ## How it works
 
@@ -67,9 +65,7 @@ This fits into ordinary writing and review, without old-document labels or a rec
 
 ## Languages
 
-The README and installation guide are available in Chinese and English. There is one English runtime instruction file, with a [Chinese reading copy](doc/skill.zh-CN.md) for maintainers. Output follows the user's language; it is not bilingual unless requested. Examples are selected by language and loaded only when needed.
-
-This avoids maintaining two competing skill entries or loading duplicate instructions. It is not a claim that English instructions perform better. Research and development records currently remain in Chinese. See the [language maintenance policy](doc/localization.md).
+Choose the [English skill](skills/clear-communication/SKILL.md) or the [Chinese skill](skills/中文/clear-communication/SKILL.md) and the matching persistent rules. Each package includes its workflow and references. Replies follow the requested or conversational language.
 
 ## Status
 

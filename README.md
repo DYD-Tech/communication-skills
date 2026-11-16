@@ -13,10 +13,7 @@
 仓库上传后，将下面这段话发给你正在使用的编程 agent：
 
 ```text
-请从 https://github.com/DYD-Tech/communication-skills 安装 clear-communication 技能，技能目录是 skills/clear-communication。
-先读取仓库的 doc/installation.md，按当前 agent 的方式安装到个人范围，
-并在其常驻规则中添加每次任务应用该技能的要求；保留我已有的规则和本地修改。
-只安装完整技能包，不复制仓库的开发文档或根目录 AGENTS.md。
+请从 https://github.com/DYD-Tech/communication-skills 按 doc/installation.md 安装到个人范围。使用中文技能包 skills/中文/clear-communication 和 rules/中文/clear-communication.md。将规则正文合并到常驻指令，并添加每次任务应用技能的要求。保留已有规则和本地修改。
 安装后检查实际路径和引用是否有效，并告诉我默认启用配置、来源版本及如何验证生效。
 如果当前环境不支持个人安装或常驻规则，明确说明并给出可用替代方式。
 ```
@@ -28,7 +25,9 @@
 ## 项目内容
 
 ```text
-skills/clear-communication/
+rules/{English,中文}/clear-communication.md  按安装语言选用的常驻规则
+skills/clear-communication/      英文技能包
+skills/中文/clear-communication/  中文技能包（两者结构相同）
   SKILL.md                    可独立使用的技能入口
   agents/openai.yaml          允许自动触发的配置
   references/examples.md      需要校准表达时读取的对照示例
@@ -39,7 +38,7 @@ doc/
   README.md                   开发文档导航
   installation.md             常见 agent 的安装、默认启用与验证
   installation.en.md          英文安装说明
-  skill.zh-CN.md              技能指令中文对照，供维护者阅读
+  skill.zh-CN.md              中文技能入口链接
   problems.md                 AI / agent 写作问题清单
   research.md                 调研方法、来源、结论和证据边界
   design.md                   技能设计与取舍
@@ -48,13 +47,13 @@ doc/
   changelog.md                版本与验证记录
 ```
 
-`skills/clear-communication/` 是完整技能包；`doc/` 只记录开发过程，不随技能加载，也不是使用技能的依赖。
+每个语言目录下的 `clear-communication/` 都是完整技能包；`doc/` 只记录开发过程，不随技能加载，也不是使用技能的依赖。
 
 ## 使用
 
-这是每次工作都适用的基础技能，不需要用户每次点名。本项目的 [AGENTS.md](AGENTS.md) 要求加载并应用 [SKILL.md](skills/clear-communication/SKILL.md)；已有最新内容时复用，避免反复读取。也可以显式使用：
+这是每次工作都适用的基础技能，不需要用户每次点名。本项目的 [AGENTS.md](AGENTS.md) 要求加载并应用 [SKILL.md](skills/中文/clear-communication/SKILL.md)；已有最新内容时复用，避免反复读取。也可以显式使用：
 
-> 请读取 `skills/clear-communication/SKILL.md`，在这次任务中按照该技能组织输出。向不熟悉这个领域的人解释必要术语，先把事情讲清楚，再压缩文字。
+> 请读取 `skills/中文/clear-communication/SKILL.md`，在这次任务中按照该技能组织输出。向不熟悉这个领域的人解释必要术语，先把事情讲清楚，再压缩文字。
 
 需要安装时，把整个 `clear-communication` 文件夹放入目标 agent 支持的技能目录。各产品的发现和启用方式不同，请按其说明配置；只把文件放入本仓库不代表它已对所有对话生效。不支持技能机制的模型，也可以把入口内容作为任务的写作要求提供给它。
 
@@ -72,9 +71,7 @@ doc/
 
 ## 双语设计
 
-README 和安装说明提供中英文版本。技能只有一份英文运行指令，并明确跟随用户指定语言或当前对话语言；不默认输出双语。中文使用者可阅读 [指令中文对照](doc/skill.zh-CN.md)。中英文示例只按需选择一份，不同时加载。
-
-这是一项维护与加载方面的设计选择，不代表英文指令效果已被证明更好。研究、问题清单和迭代记录目前以中文维护，不影响英文用户安装使用；双语同步约定见 [语言维护说明](doc/localization.md)。
+按安装语言选用[中文技能包](skills/中文/clear-communication/SKILL.md)或[英文技能包](skills/clear-communication/SKILL.md)，并安装同一语言的常驻规则。两种包都包含完整流程和参考材料。回复语言跟随用户要求或对话语言。
 
 ## 核心要求
 

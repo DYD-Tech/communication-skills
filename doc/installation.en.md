@@ -21,7 +21,9 @@ Report network or permission limitations precisely. Files in a temporary sandbox
 
 ## Manual installation
 
-Download and extract the repository ZIP, or clone it with Git. Copy the complete `skills/clear-communication/` folder to one of the locations below. Choose user scope for your projects or project scope for a shared repository; avoid accidental duplicate installations.
+Select the installation language. Use `skills/clear-communication/` for English or `skills/中文/clear-communication/` for Chinese, with matching rules. Install the selected package as a single `clear-communication/` directory. When switching languages, compare local changes first and update the existing package and persistent rules in place.
+
+Download and extract the repository ZIP, or clone it with Git. Copy the complete selected skill folder to one of the locations below. Choose user scope for your projects or project scope for a shared repository; avoid accidental duplicate installations.
 
 The destination must directly contain `SKILL.md`, without another nested `clear-communication` folder. `~` means your home directory, typically `%USERPROFILE%` on Windows; PowerShell exposes it through `$HOME`. Project paths are relative to the consuming project's root.
 
@@ -35,11 +37,9 @@ The destination must directly contain `SKILL.md`, without another nested `clear-
 
 These are selected supported paths, not an exhaustive list. An installed helper may choose a different compatible location; the Codex installer in this project's development environment uses `$CODEX_HOME/skills`. Record the actual destination and verify discovery instead of installing a second copy just to match the table.
 
-## Apply it by default
+## Configure persistent communication rules
 
-Discovery makes a skill available for selection; it does not guarantee use in every task. The included `agents/openai.yaml` allows Codex implicit invocation but does not configure persistent instructions for the user.
-
-Add this short instruction in the appropriate location below. Replace the placeholder with the real installed entry path. Use an absolute path for a personal installation, or explicitly identify a path relative to the project root.
+Select the [English rules](../rules/English/clear-communication.md) or [Chinese rules](../rules/中文/clear-communication.md). Merge the selected text into the persistent instructions for the host below. Reuse its managed block on updates. Then append the following skill instruction with the actual installed path. Hosts with persistent instructions alone can use the rule text independently.
 
 ```text
 Apply clear-communication to every task. Entry: <installed SKILL.md path>.
@@ -65,6 +65,7 @@ For personal use, add the instruction to User Rules. If the agent cannot edit th
 description: Apply clear-communication to each task
 alwaysApply: true
 ---
+<Insert the selected communication rule text here>
 Apply the skill at .cursor/skills/clear-communication/SKILL.md, relative to the
 project root, on every task. Reuse current instructions already in context.
 Check short answers lightly; organize and revise complex content without narrating checks.
@@ -86,7 +87,7 @@ Merge personal rules into `~/.config/opencode/AGENTS.md`, or project rules into 
 
 Verify three things separately:
 
-1. **Files:** The entry and examples exist, and the persistent rule references a readable path.
+1. **Files:** The persistent instructions contain the selected rule text, the entry and examples exist, and the persistent rule references a readable path.
 2. **Loading:** Check the skill list or loading record in a new session; try explicit invocation if supported. The model saying “installed” is not sufficient evidence.
 3. **Default use:** In another new session, ask a normal question without naming the skill, such as “Explain why a client timeout does not mean the server did nothing, in two sentences for a nontechnical reader.” Check loading records when available and inspect the answer. A good answer alone does not prove automatic loading or future adherence.
 

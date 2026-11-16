@@ -1,6 +1,6 @@
 # 项目沟通要求
 
-每次任务均应用 [clear-communication](skills/clear-communication/SKILL.md)，无需用户点名。开始工作时读取入口；当前上下文已有最新内容时复用，文件更新或上下文丢失后重新读取。
+每次任务先遵循[基础沟通规则](rules/中文/clear-communication.md)。每次任务均应用 [clear-communication](skills/中文/clear-communication/SKILL.md)，无需用户点名。开始工作时读取入口；当前上下文已有最新内容时复用，文件更新或上下文丢失后重新读取。
 
 短答直接写并做轻量检查；复杂文字按技能整理、成文、定点修正。不要给每条消息增加提纲、术语表、评分报告或文件，不对内部思考规定写作流程。完成用户任务优先。
 
