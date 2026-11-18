@@ -149,3 +149,14 @@ Name the action, object, and result instead of making the reader decode “entry
 For an AI developer, “The rejection of the request was due to the exceeding of the input token limit” buries the cause. Write “Your input exceeded the token limit, so the request was rejected.” For a newcomer, add “The model measures text length in small units called tokens.” The term here measures input length. An authentication token has a different meaning.
 
 Choose new labels for what the control actually does. If a button simply opens a list of edits, “View changes” fits. When guiding someone through an existing interface, use its actual label, such as `Review changes`, so they can find it.
+
+
+## 17. Explain how a state led to the wrong action
+
+A supplied bug report says a click on notion.so redirects to notion.com, the reported page address still identifies the home page, and the application overwrites the icon cache address. Saying “the redirect was too fast” omits the decision that caused the overwrite.
+
+A grounded explanation would be “The icon was stored under notion.com, while the home-page shortcut looked it up under notion.so. According to the report, our application treats a new navigation address received while the reported page is still the home page as a home-page click. It therefore replaced the remembered notion.so with notion.com. An automatic redirect satisfied that condition and overwrote the original click address.”
+
+The reported home-page state matters because it participates in that condition. Reporting page state and deciding that a user clicked are separate actions with distinct owners. This explains the supplied report. The actual condition, callback order, and responsibilities of the browser engine and application require code and runtime evidence.
+
+If the user questions “the redirect was too fast,” reassess that cause. A suitable response is “The report establishes a mismatch between the icon write address and lookup address. Why the application used the current page to identify the click source, and why it read the home-page address, still require checking the condition, interface contract, and event records. I lacked evidence when I attributed this to redirect speed.” Check whether the application should have observed notion.so and whether the explanation conflated a request address, page loading, and an interface report.
